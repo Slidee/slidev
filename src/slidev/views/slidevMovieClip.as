@@ -166,7 +166,7 @@ package slidev.views
 		private function _onEnterCatchHideEnd(pEvt:Event){
 			p_frameCount ++;
 			if(this.currentFrameLabel == "hide_end" ||this.currentFrameLabel == "stop" || p_frameCount >= p_maximumFrame){
-				this.removeEventListener(Event.ENTER_FRAME, _onEnterCatchShowEnd);
+				this.removeEventListener(Event.ENTER_FRAME, _onEnterCatchHideEnd);
 				this.stop();
 				this._postHide();
 			}

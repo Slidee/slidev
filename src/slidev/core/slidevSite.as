@@ -3,10 +3,10 @@
  *
  *
  *
- * This is a part of the SymflaCms project
+ * This is a part of the SlidevCms project
  * 
- * @class: symflaSite (symfla.core)
- * @file: symflaSite.as
+ * @class: slidevSite (slidev.core)
+ * @file: slidevSite.as
  * @author: Enerol
  * @date: 2010-07-08 23:40
  **/

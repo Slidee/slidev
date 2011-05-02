@@ -23,7 +23,7 @@ package slidev.core
 		public function slidevMain()
 		{
 			super();
-			Dbg.t("symflaMainCreated successfully");
+			Dbg.t("slidevMain Created successfully");
 			init();
 		}
 		

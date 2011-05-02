@@ -3,10 +3,10 @@
  *
  *
  *
- * This is a part of the SymflaCms project
+ * This is a part of the SlidevCms project
  * 
- * @class: symflaContext (symfla.core)
- * @file: symflaContext.as
+ * @class: slidevContext (slidev.core)
+ * @file: slidevContext.as
  * @author: Enerol
  * @date: 2010-07-08 23:40
  **/package slidev.core
@@ -24,7 +24,7 @@
 		public static function init(pConfigFile:String):void{
 			slidevLoadManager.init();
 			
-			var fEventToCatch: slidevCoreEvent = new slidevCoreEvent(slidevCoreEvent.CONFIG_INITED, _onConfigInitted);
+			var fEventToCatch:slidevCoreEvent = new slidevCoreEvent(slidevCoreEvent.CONFIG_INITED, _onConfigInitted);
 			slidevEventsManager.addListenerFor(fEventToCatch);
 			slidevConfig.init(pConfigFile);
 		}
