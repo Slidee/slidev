@@ -1,0 +1,10 @@
+<mainconfig>
+	<config file="../datas/conf/debug.xml" /> 
+	<config file="../datas/conf/network.xml" />
+	<config file="../datas/conf/datas.xml" />
+	<config file="../datas/conf/texts.xml" />
+	
+	<!-- All the xml elements named var will be stocked into symflaConfig.as and will be retrievable by symflaConfig.getV(Var_Name, Default_Value) -->
+	<!-- So all configuration variables you need to push into application could be placed here -->
+	<var name="LOAD_CACHE" value="7" />
+</mainconfig>

@@ -1,0 +1,13 @@
+<fr_texts>
+	<scope name="home">
+		<text name="welcome" type="html">
+			Bienvenue sur le site de test du symflaFramework<br/>
+			C'est un site trop <strong>cool</strong>
+		</text>
+	</scope>
+	
+	<scope name="topbar">
+		<text name="home_link" value="Accueil" />
+		<text name="contact_link" value="Contact" />
+	</scope>
+</fr_texts>

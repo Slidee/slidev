@@ -1,0 +1,4 @@
+<datasconfig>
+	<var name="from_network" value="false" />
+	<var name="folder" value="../datas/contents" />
+</datasconfig>

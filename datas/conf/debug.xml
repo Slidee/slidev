@@ -1,0 +1,6 @@
+<debugconfig>
+	<var name="trace_0" value="[ color:'#555555', size:10 ]" />
+	<var name="trace_1" value="[ color:'#000000', size:10 ]" />
+	<var name="trace_2" value="[ color:'#880505', size:12, bold:1 ]" />
+	<var name="trace_3" value="[ color:'#BB1515', size:12, bold:1 ]" />
+</debugconfig>

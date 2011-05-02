@@ -1,0 +1,13 @@
+<en_texts>
+	<scope name="home">
+		<text name="welcome" type="html">
+			Welcome on the test website for the symflaFramework<br/>
+			That's a really <strong>funny</strong> website !
+		</text>
+	</scope>
+	
+	<scope name="topbar">
+		<text name="home_link" value="Home" />
+		<text name="contact_link" value="Contact" />
+	</scope>
+</en_texts>

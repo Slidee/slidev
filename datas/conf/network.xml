@@ -1,0 +1,5 @@
+<networkconfig>
+	<var name="use_network" value="false" />
+	<var name="gateway" value="/gateway" />
+	<var name="service" value="symflaCoreService" /> 
+</networkconfig>

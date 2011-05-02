@@ -1,0 +1,5 @@
+<textsconfig>
+	<var name="default_language" value="fr" />
+	<var name="i18n_folder" value="../datas/texts" />
+	<var name="available_languages" value="['fr','en']" />
+</textsconfig>
