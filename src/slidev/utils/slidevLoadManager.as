@@ -12,7 +12,6 @@
  **/
 package slidev.utils
 {
-	import slidev.abstract.slidevQueuableInterface;
 	import slidev.core.slidevConfig;
 	import slidev.debug.Dbg;
 	import slidev.struct.slidevLoad;

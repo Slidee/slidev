@@ -18,6 +18,7 @@ package slidev.events
 	{
 		
 		public static const CREATED:String 		= "SLIDEV_VIEW_EVENT_CREATED";
+		public static const INITTED:String 		= "SLIDEV_VIEW_EVENT_INITTED";
 		public static const DELETED:String 		= "SLIDEV_VIEW_EVENT_DELETED";
 		
 		public static const PRE_SHOW:String 	= "SLIDEV_VIEW_EVENT_PRE_SHOW";

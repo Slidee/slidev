@@ -18,7 +18,7 @@ package slidev.abstract
 		function init():void;
 		
 		
-		function pushToQueue(pObj:Object):void;
+		static function pushToQueue(pObj:Object):void;
 		function removeFromQueue(pObj:Object):Object;
 		
 		function isIntoQueue(pObj:Object):Boolean;

@@ -5,6 +5,7 @@ package slidev.views
 	import flash.text.TextField;
 	
 	import slidev.abstract.slidevInstanciable;
+	import slidev.core.slidevDatasManager;
 	import slidev.core.slidevEventsManager;
 	import slidev.events.slidevViewEvent;
 	import slidev.struct.slidevDynamicContent;
@@ -18,10 +19,22 @@ package slidev.views
 		private var p_frameCount:Number = 0;
 		private var p_maximumFrame:Number = 999;
 		
+		/**
+		 * Standard Constructor, must call _init() after added to Stage (so it gets the required contents)
+		 * */
 		public function slidevMovieClip()
 		{
 			super();
 			slidevEventsManager.dispatchEvent(new slidevViewEvent(slidevViewEvent.CREATED));
+		}
+		
+		/**
+		 * Init the view Object (retrieve dynamic contents and set other objects, then dispath the INITTED event
+		 * You must override this function to call all the "registerDynamicContent" methods, but don't forget to call super._init() after the registers
+		 * */
+		protected function _init():void{
+			this._treatPendingContents();
+			slidevEventsManager.dispatchEvent(new slidevViewEvent(slidevViewEvent.INITTED));
 		}
 		
 		/**
@@ -85,6 +98,28 @@ package slidev.views
 			
 		}
 		
+		/**
+		 * Has dynamic content, return true if there is some dynamic content left (no loaded yet).
+		 * */
+		protected function _hasDynamicContents():Boolean{
+			for(var i:int = 0; i< _dynamicContents.length; i++){
+				if(_dynamicContents[i].content == null ) return true;
+			}
+			
+			return false;
+		}
+		
+		/**
+		 * Treat the pending contents, foreach content that haven't already been load, 
+		 * we will start the loading
+		 * */
+		protected function _treatPendingContents():void{
+			for(var i:int; i<_dynamicContents.length; i++){
+				if(_dynamicContents[i].content == null) slidevDatasManager.
+			}
+		}
+		
+		
 		
 		
 		/**
@@ -120,6 +155,7 @@ package slidev.views
 		 * pre show hook, use it if you wanna make your own modification on the view before showing it
 		 * */
 		protected function _preShow():void{
+			if(this._hasDynamicContents()) _treatPendingContents();
 			p_frameCount = 0;
 			this.dispatchEvent(new slidevViewEvent(slidevViewEvent.PRE_SHOW));
 		}
@@ -151,7 +187,7 @@ package slidev.views
 		/**
 		 * real Events catching to detect show END
 		 * */
-		private function _onEnterCatchShowEnd(pEvt:Event){
+		private function _onEnterCatchShowEnd(pEvt:Event):void{
 			p_frameCount ++;
 			if(this.currentFrameLabel == "show_end" || this.currentFrameLabel == "stop" || p_frameCount >= p_maximumFrame){
 				this.removeEventListener(Event.ENTER_FRAME, _onEnterCatchShowEnd);
@@ -163,7 +199,7 @@ package slidev.views
 		/**
 		 * real Events catching to detect hide END
 		 * */
-		private function _onEnterCatchHideEnd(pEvt:Event){
+		private function _onEnterCatchHideEnd(pEvt:Event):void{
 			p_frameCount ++;
 			if(this.currentFrameLabel == "hide_end" ||this.currentFrameLabel == "stop" || p_frameCount >= p_maximumFrame){
 				this.removeEventListener(Event.ENTER_FRAME, _onEnterCatchHideEnd);

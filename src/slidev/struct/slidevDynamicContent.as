@@ -7,6 +7,7 @@ package slidev.struct
 		public static const TYPE_IMG:String = "dynamic_img";
 		public static const TYPE_TXT:String = "dynamic_txt";
 		
+		public var uid:Number = null;
 		
 		public var key:String = null;
 		public var container:* = null;
@@ -16,6 +17,7 @@ package slidev.struct
 		public var language:String = null;
 		
 		public var content:* = null;
+		public var callback:Function = null;
 		
 		
 		
