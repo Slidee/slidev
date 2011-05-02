@@ -39,7 +39,7 @@ package slidev.core
 		 * */
 		public function slidevConfig(pConfigFile:String)
 		{
-			slidevCoreEventsManager.registerDispatcher(this);
+			slidevEventsManager.registerDispatcher(this);
 			_stockedVars = new Array();
 			DEFAULT_LIB_NAME = slidevHelper.filename(pConfigFile)
 			var fLib:Object  = {

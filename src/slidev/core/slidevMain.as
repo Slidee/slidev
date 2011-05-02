@@ -28,7 +28,7 @@ package slidev.core
 		}
 		
 		public function init():void{
-			slidevCoreEventsManager.init(this);
+			slidevEventsManager.init(this);
 			slidevContext.init(_configFile);
 		}
 	}

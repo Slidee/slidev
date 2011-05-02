@@ -25,7 +25,7 @@
 			slidevLoadManager.init();
 			
 			var fEventToCatch: slidevCoreEvent = new slidevCoreEvent(slidevCoreEvent.CONFIG_INITED, _onConfigInitted);
-			slidevCoreEventsManager.addListenerFor(fEventToCatch);
+			slidevEventsManager.addListenerFor(fEventToCatch);
 			slidevConfig.init(pConfigFile);
 		}
 		

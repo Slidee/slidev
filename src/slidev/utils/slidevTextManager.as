@@ -13,7 +13,7 @@
 package slidev.utils
 {
 	import slidev.core.slidevConfig;
-	import slidev.core.slidevCoreEventsManager;
+	import slidev.core.slidevEventsManager;
 	import slidev.core.slidevDatasManager;
 	import slidev.debug.Dbg;
 	import slidev.events.slidevCoreEvent;
@@ -150,7 +150,7 @@ package slidev.utils
 			for(var fIndex in fInstance._availableLanguages){
 				if(fInstance._availableLanguages[fIndex] == pNewLanguage){
 					fInstance._currentLanguage = pNewLanguage;
-					slidevCoreEventsManager.sendEvent(new slidevCoreEvent(slidevCoreEvent.TEXT_MANAGER_CHANGE_LANGUAGE));
+					slidevEventsManager.sendEvent(new slidevCoreEvent(slidevCoreEvent.TEXT_MANAGER_CHANGE_LANGUAGE));
 					return;
 				}
 			}
